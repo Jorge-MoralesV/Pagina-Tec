@@ -1,0 +1,1 @@
+<h1 class="text-center" style="color: #005AA0;">Instituto Tecnológico Superior de El Mante</h1>
