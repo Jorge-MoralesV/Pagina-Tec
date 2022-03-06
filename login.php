@@ -9,7 +9,7 @@ if (isset($_SESSION['user_id'])) {
 require 'bd.php';
 
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE email=:email');
+    $records = $conn->prepare('SELECT id_user, email, password FROM users WHERE email=:email');
     $records->bindParam(':email', $_POST['email']);
     $records->execute();
     $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -17,7 +17,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $message = "";
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-        $_SESSION['user_id'] = $results['id'];
+        $_SESSION['user_id'] = $results['id_user'];
         header('Location: /login-tec');
     } else {
         $message = 'Sorry, those credentials do not match';
