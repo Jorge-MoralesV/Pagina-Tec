@@ -25,8 +25,6 @@ if ($pass == $conf_pass) {
     $message = 'Las contraseñas no coinciden';
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +34,12 @@ if ($pass == $conf_pass) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Registrarse</title>
 </head>
 
-<body>
+<body style="background-image: url('./assets/img/tec_fondo_2.jpg');">
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #005AA0;">
         <h1 style="color: white;" class="ml-2 mr-2">Registrarse</h1>
     </nav>
@@ -51,7 +50,7 @@ if ($pass == $conf_pass) {
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card" style="background-color: #F6F6F6; border: 0; box-shadow: 0 5px 6px -6px #777; margin-top: 10%;">
-        <div class="form-group">
+        <div class="form-group m-5">
             <form method="post" action="signup.php">
                 <?php
                 require 'partials/nombre_tec.php'
